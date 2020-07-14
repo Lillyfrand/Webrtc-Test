@@ -1,0 +1,26 @@
+<html> 
+<head>
+	<title>first webpage</title>
+
+</head>
+<body>
+	<label id="t">HELLO WORLD</label>
+	<button id="b">Click</button>
+	<video id="video" playsinline autoplay></video>
+<script type="text/javascript"> 
+	var l = document.getElementById("t")
+	var b = document.getElementById("b")
+	var video = document.getElementById("video")
+b.onclick = function(){
+	l.innerHTML="ByeWorld"
+ }
+var um = navigator.mediaDevices.getUserMedia({audio:true, video:true})
+var ass = function (stream) {
+                video.srcObject=stream
+        }
+
+um.then(ass)
+um.onerror()
+</script>
+</body>
+</html>
